@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+        i,s,b,em,a{
+            text-decoration: none;
+            color: #000;
+            font-style: normal;
+        }
+        .w{
+            width: 1895px;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<!--    top     -->
+<div class="top w">
+    <img src="imgs/bg1.jpg" alt="" style="width: 1895px;height: 625px;" class="img3"/>
+    <div class="logo"><img src="img/logo.png" alt=""/></div>
+    <div class="r"><a href="javascript:void(0)"><span></span><i>进入官网</i></a></div>
+    <div class="lio"><span></span>
+                     <span id="span"></span>
+    </div>
+</div>
+<!--    tou     -->
+<div class="tou w">
+    <img src="imgs/bg2.jpg" alt="" style="width: 1895px;height: 710px;"/>
+    <div class="denglu">
+    <div class="zhanghao"><a href="javascript:void(0)" style="margin-left: 30px">账号</a>
+        <input id="input1" type="text" placeholder="请输入邮箱或者手机号" style="width: 240px;
+        height: 28px;padding-left: 5px;"/>
+    </div>
+    <div class="mima" style="margin-top: 20px"><a href="javascript:void(0)">登录密码</a>
+        <input id="input2" type="text" placeholder="请输入6到16位密码,区分大小写" style="width: 240px;height: 28px;padding-left: 5px"/>
+    </div>
+        <div class="liji">
+            <a href="javascript:void(0)" style="width: 290px;display: inline-block;height: 60px;
+            font-weight: 900;color: black;font-size: 40px;position: absolute;top: 10px;left: 70px">立即注册</a></div>
+        <div style="width: 386px;height: 101px;" class="xiazai"><a href="javascript:void(0)"><img src="img/down.png" alt=""/></a></div>
+    </div>
+    <script type="text/javascript">
+        var input1=document.getElementById("input1");
+        var input2=document.getElementById("input2");
+        var nn1=/^([\w-]+)@[1-9a-zA-Z]{2,4}(\.[a-zA-Z]{2,3}){1,2}$/;
+        var nn11=/^1[34578]\d{9}$/;
+        input1.onblur=function(){
+            if(nn1.test(input1.value)||nn11.test(input1.value)){
+                input1.placeholder="正确";
+                input1.style.border="1px solid blue";
+            }else{
+                input1.placeholder="请输入邮箱或者手机号";
+                input1.style.border="1px solid red";
+            }
+        };
+        var nn2=/^([a-z1-9]{6,16})|([A-Z1-9]{6,16})$/;
+        input2.onblur=function(){
+            if(nn2.test(input2.value)){
+                input2.placeholder="正确";
+                input2.style.border="1px solid blue";
+            }else{
+                input2.placeholder="请输入6到16位密码,区分大小写";
+                input2.style.border="1px solid red";
+            }
+        }
+    </script>
+</div>
+<!--    zhong     -->
+<div class="zhong w">
+    <img src="imgs/bg3.jpg" alt="" style="width: 1895px;height: 590px;"/>
+    <div class="xuanxiang">
+        <ul class="ul1" id="ul1">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="ul2">
+            <li class="ulimg" id="img11"><img src="imgs/flv_img5.png" alt=""/></li>
+            <li><img src="imgs/flv_img4.png" alt=""/></li>
+            <li><img src="imgs/flv_img3.png" alt=""/></li>
+            <li><img src="imgs/flv_img2.png" alt=""/></li>
+            <li><img src="imgs/flv_img1.png" alt=""/></li>
+        </ul>
+        <div style="" id="jj" class="jj"><img src="imgs/11.png" alt="" class="jj1" id="jj1"/><img src="imgs/12.png" alt="" class="jj2" id="jj2"/>
+            <div class="i1" id="i1"></div>
+            <div class="i2" id="i2"></div></div>
+    </div>
+    <video src="img/nizhan.flac"></video>
+    <audio src="img/nizhan.flac"></audio>
+    <script>
+        var ul1=document.getElementById("ul1");
+        var img11=document.getElementById("img11");
+        var li1=ul1.getElementsByTagName("li");
+        var ul2=document.getElementById("ul2");
+        var li2=ul2.getElementsByTagName("li");
+        for(var i=0;i<li1.length;i++){
+            li1[i].xx=i;
+            li1[i].onmouseover=function(){
+                for(var l=0;l<li1.length;l++){
+                    li1[l].className="";
+                    li2[l].className="";
+                }
+                li1[this.xx].className="li1";
+                li2[this.xx].className="ulimg";
+            }
+        }
+        ul1.onmouseout=function(){
+            for(var l=0;l<li1.length;l++){
+                li1[l].className="";
+                li2[l].className="";
+            }
+            li2[0].className="ulimg";
+        };
+        var jj=document.getElementById("jj");
+        var jj2=document.getElementById("jj2");
+        var i1=document.getElementById('i1');
+        var i2=document.getElementById('i2');
+        var id=0;
+        var MapImg = document.getElementsByTagName("audio")[0];
+        jj.onclick=function(){
+           if(!MapImg.autoplay){
+             MapImg.play();
+             jj2.style.display="none";
+             i1.style.display="block";
+             i2.style.display="block";
+             MapImg.autoplay='true';
+         }else if(MapImg.autoplay){
+             MapImg.pause();
+             jj2.style.display="block";
+             i1.style.display="none";
+             i2.style.display="none";
+             MapImg.autoplay=false;
+         }
+       };
+        /*jj.ondblclick=function(){
+            jj2.style.display="block";
+            i1.style.display="none";
+            i2.style.display="none";
+
+            MapImg.loop="";
+        }*/
+    </script>
+</div>
+<!--     di     -->
+<div class="di w">
+    <img src="imgs/bg4.jpg" alt="" style="width: 1895px;height: 727px;"/>
+    <div class="di1">
+        <ul class="xx" id="xx">
+            <li class="x1"><img src="imgs/tabs_btn1.jpg" alt=""/></li>
+            <span class="xx1"><img src="imgs/tabs_img1.jpg" alt=""/></span>
+            <li><img src="imgs/tabs_btn2.jpg" alt=""/></li>
+            <span><img src="imgs/tabs_img2.jpg" alt=""/></span>
+            <li><img src="imgs/tabs_btn3.jpg" alt=""/></li>
+            <span><img src="imgs/tabs_img3.jpg" alt=""/></span>
+            <li><img src="imgs/tabs_btn4.jpg" alt=""/></li>
+            <span><img src="imgs/tabs_img4.jpg" alt=""/></span>
+            <li><img src="imgs/tabs_btn5.jpg" alt=""/></li>
+            <span><img src="imgs/tabs_img5.jpg" alt=""/></span>
+        </ul>
+</div>
+    <script type="text/javascript">
+        var xx=document.getElementById('xx');
+        var lis=xx.getElementsByTagName("li");
+        var spans=xx.getElementsByTagName("span");
+        console.log(spans);
+        console.log(lis);
+        for(var y=0;y<lis.length;y++){
+            lis[y].cv=y;
+            lis[y].onclick=function(){
+                for(var p=0;p<lis.length;p++){
+                    lis[p].className="";
+                    spans[p].className="";
+                   }
+                lis[this.cv].className="x1";
+                spans[this.cv].className="xx1";
+            }
+        }
+</script>
+</div>
+<div class="nn w">
+    <div class="nn1">
+    <img src="imgs/122.png" alt="" class="img"/>
+        <img src="imgs/line.jpg" alt="" class="img1"/>
+        <p><i>企业推广</i> - <i>输入法</i> - <i>浏览器</i> - <i>诚聘英才</i> - <i>免责声明</i> - <i>官方微博</i></p>
+         <p><i>© 2017 SOGOU.COM </i><i>京ICP证050897号</i></p>
+    </div>
+</div>
+
+</body>
+</html>

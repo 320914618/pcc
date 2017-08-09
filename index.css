@@ -1,0 +1,328 @@
+.top{
+    height: 625px;
+    position: relative;
+}
+.top .img3{
+    width: 1895px;
+    height: 625px;
+}
+.top .logo{
+    width: 191px;
+    height: 76px;
+    position: absolute;
+    top: 20px;
+    left: 370px;
+    cursor: pointer;
+}
+.top .r{
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    top: 45px;
+    right: 365px;
+}
+.top .r a{}
+.top .r a span{
+    width: 23px;
+    height: 19px;
+    display: inline-block;
+    background:url("imgs/icon1.png") no-repeat;
+}
+.top .r a i{
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #FFD602;
+    margin-left: 4px;
+}
+.top .lio{
+    width: 80px;
+    height: 92px;
+    position: relative;
+    bottom: 130px;
+    left: 910px;
+}
+.top .lio span:nth-child(1){
+    width: 80px;
+    height: 92px;
+    cursor: pointer;
+    background: url("imgs/002.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s;
+    animation: move1 5s linear infinite both;
+
+}
+.top .lio span:nth-child(2){
+    width: 33px;
+    height: 43px;
+    display: inline-block;
+    position: absolute;
+    top: 27px;
+    left: 30px;;
+    background: url("imgs/003.png");
+    animation: move2 3s linear infinite both;
+
+}
+@keyframes move2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.6);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+@keyframes move1 {
+    0%{
+        transform: rotate(0deg);
+        opacity: 0.3;
+    }
+    50%{
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0.3;
+    }
+}
+.top .lio img:hover {
+}
+
+
+
+
+
+.tou{
+    height: 710px;
+    position: relative;
+}
+.tou .denglu{
+    width: 320px;
+    height: 175px;
+    position: absolute;
+    top: 250px;
+    left: 500px;
+}
+.tou .denglu div input{
+    float: right;
+    border: 1px solid #000000;
+    background-color: #616059;
+}
+.tou .denglu div a{
+    color: white;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+}
+.tou .denglu .liji{
+    width: 290px;
+    height: 60px;
+    margin-top: 20px;
+    background:url("img/11.bmp");
+    position: relative;
+}
+.tou .denglu .xiazai{
+   margin-top: 32px;
+   margin-left: -22px;
+}
+
+
+
+
+    /*             */
+.zhong{
+    height: 590px;
+    position: relative;
+}
+.zhong .xuanxiang{
+    height: 354px;
+    width: 1000px;
+    position: absolute;
+    top: 118px;
+    left: 454px;
+}
+.zhong .xuanxiang .ul1{
+    height: 354px;
+    width: 224px;
+    float: left;
+}
+.zhong .xuanxiang .ul1 li{
+    width: 224px;
+    height: 56px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: url("imgs/tab_btns.png");
+}
+.zhong .xuanxiang .ul1 li:nth-child(1){
+    background: url("imgs/tab_btns.png") 0 -1px no-repeat;
+}
+.zhong .xuanxiang .ul1 li:nth-child(1):hover{
+    background-position: -224px -1px;
+}
+.zhong .xuanxiang .ul1 li:nth-child(2){
+    background: url("imgs/tab_btns.png") 0 -59px no-repeat;
+}
+.zhong .xuanxiang .ul1 li:nth-child(2):hover{
+    background-position: -224px -59px;
+
+}
+.zhong .xuanxiang .ul1 li:nth-child(3){
+    background: url("imgs/tab_btns.png") 0 -116px no-repeat;
+}
+.zhong .xuanxiang .ul1 li:nth-child(3):hover{
+    background-position: -224px -116px;
+}
+.zhong .xuanxiang .ul1 li:nth-child(4){
+    background: url("imgs/tab_btns.png") 0 -174px no-repeat;
+}
+.zhong .xuanxiang .ul1 li:nth-child(4):hover{
+    background-position: -224px -174px;
+}
+.zhong .xuanxiang .ul1 li:nth-child(5){
+    background: url("imgs/tab_btns.png") 0 -240px no-repeat;
+}
+.zhong .xuanxiang .ul1 li:nth-child(5):hover{
+    background: url("imgs/tab_btns.png") -224px -240px no-repeat;
+}
+.zhong .xuanxiang #ul2{
+   float: right;
+}
+.zhong .xuanxiang #ul2 li{
+    width: 758px;
+    height: 355px;
+    display: none;
+    float: left;
+}
+.zhong .xuanxiang #ul2 .ulimg{
+    display: block;
+}
+.zhong .jj{
+    width: 80px;
+    height: 92px;
+    position: relative;
+    cursor: pointer;
+    top: 130px;
+    left: 600px;
+}
+.zhong .jj .jj1{
+    width: 80px;
+    height: 92px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.zhong .jj div{
+    width: 5px;
+    height: 35px;
+    background-color: #FFD637;
+    display: none;
+}
+.zhong .jj .i1{
+    position: absolute;
+    top: 28px;
+    left: 30px;
+}
+.zhong .jj .i2{
+    position: absolute;
+    top: 28px;
+    left: 45px;
+}
+.zhong .jj .jj2{
+    width: 33px;
+    height: 43px;
+    position: absolute;
+    top: 24px;
+    left: 30px;
+    /*display: none;*/
+}
+
+
+
+
+/*      */
+.di{
+    height: 727px;
+    position: relative;
+}
+.di .di1{
+    width: 1000px;
+    height: 551px;
+    position: absolute;
+    top: 92px;
+    left: 449px;
+}
+.di .di1 .xx{
+    width: 1000px;
+    height: 551px;
+    cursor: pointer;
+
+}
+.di .di1 .xx li{
+    float: left;
+    width: 113px;
+    height: 551px;
+    opacity: 0.5;
+}
+.di .di1 .xx li:hover{
+    opacity: 1;
+}
+.di .di1 .xx .x1{
+    display: none;
+}
+
+.di .di1 .xx span{
+    display: none;
+    width: 548px;
+    height: 551px;
+    float: left;
+    opacity: 0.5;
+}
+.di .di1 .xx span:hover{
+    opacity: 1;
+}
+.di .di1 .xx .xx1{
+    width: 548px;
+    height: 551px;
+    float: left;
+    display:block;
+}
+
+
+.nn{
+    height: 132px;
+    position: relative;
+    background-color: #161616;
+}
+.nn .nn1{
+    position: absolute;
+    top: 43px;
+    left: 454px;
+}
+.nn .nn1 .img{
+    float: left;
+    margin-top: 6px;
+}
+.nn .nn1 .img1{
+    float: left;
+    margin-left: 20px;
+}
+.nn .nn1 p{
+    width: 550px;
+    height: 22px;
+    position: relative;
+    left: 10px;
+}
+.nn .nn1 p i{
+    color: #fff;
+}
+.nn .nn1 p i:hover{
+    color: red;
+}
+
+
+
